@@ -1,0 +1,14 @@
+import { DeepPartial, StoreEnhancer, compose as reduxCompose } from "redux";
+import { IExtension, IModule, IModuleStore } from "./Contracts";
+/**
+ * Configure the module store
+ */
+export declare function createStore<S1>(initialState: DeepPartial<S1>, enhancers: StoreEnhancer[], extensions: IExtension[], compose: typeof reduxCompose, reduxModule: IModule<S1>): IModuleStore<S1>;
+export declare function createStore<S1, S2>(initialState: DeepPartial<S1 & S2>, enhancers: StoreEnhancer[], extensions: IExtension[], compose: typeof reduxCompose, m1: IModule<S1>, m2: IModule<S2>): IModuleStore<S1 & S2>;
+export declare function createStore<S1, S2, S3>(initialState: DeepPartial<S1 & S2 & S3>, enhancers: StoreEnhancer[], extensions: IExtension[], compose: typeof reduxCompose, m1: IModule<S1>, m2: IModule<S2>, m3: IModule<S3>): IModuleStore<S1 & S2 & S3>;
+export declare function createStore<S1, S2, S3, S4>(initialState: DeepPartial<S1 & S2 & S3 & S4>, enhancers: StoreEnhancer[], extensions: IExtension[], compose: typeof reduxCompose, m1: IModule<S1>, m2: IModule<S2>, m3: IModule<S3>, m4: IModule<S4>): IModuleStore<S1 & S2 & S3 & S4>;
+export declare function createStore<S1, S2, S3, S4, S5>(initialState: DeepPartial<S1 & S2 & S3 & S4 & S5>, enhancers: StoreEnhancer[], extensions: IExtension[], compose: typeof reduxCompose, m1: IModule<S1>, m2: IModule<S2>, m3: IModule<S3>, m4: IModule<S4>, m5: IModule<S5>): IModuleStore<S1 & S2 & S3 & S4 & S5>;
+export declare function createStore<S1, S2, S3, S4, S5, S6>(initialState: DeepPartial<S1 & S2 & S3 & S4 & S5 & S6>, enhancers: StoreEnhancer[], extensions: IExtension[], compose: typeof reduxCompose, m1: IModule<S1>, m2: IModule<S2>, m3: IModule<S3>, m4: IModule<S4>, m5: IModule<S5>, m6: IModule<S6>): IModuleStore<S1 & S2 & S3 & S4 & S5 & S6>;
+export declare function createStore<S1, S2, S3, S4, S5, S6, S7>(initialState: DeepPartial<S1 & S2 & S3 & S4 & S5 & S6 & S7>, enhancers: StoreEnhancer[], extensions: IExtension[], compose: typeof reduxCompose, m1: IModule<S1>, m2: IModule<S2>, m3: IModule<S3>, m4: IModule<S4>, m5: IModule<S5>, m6: IModule<S6>, m7: IModule<S7>): IModuleStore<S1 & S2 & S3 & S4 & S5 & S6 & S7>;
+export declare function createStore<S1, S2, S3, S4, S5, S6, S7, S8>(initialState: DeepPartial<S1 & S2 & S3 & S4 & S5 & S6 & S7 & S8>, enhancers: StoreEnhancer[], extensions: IExtension[], compose: typeof reduxCompose, m1: IModule<S1>, m2: IModule<S2>, m3: IModule<S3>, m4: IModule<S4>, m5: IModule<S5>, m6: IModule<S6>, m7: IModule<S7>, m8: IModule<S8>): IModuleStore<S1 & S2 & S3 & S4 & S5 & S6 & S7 & S8>;
+export declare function createStore<State>(initialState: DeepPartial<State>, enhancers: StoreEnhancer[], extensions: IExtension[], compose: typeof reduxCompose, ...initialModules: IModule<any>[]): IModuleStore<State>;
